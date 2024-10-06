@@ -1,0 +1,39 @@
+{
+    "name": "eslintv9-example",
+    "version": "1.0.0",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "type": "module",
+    "module": "dist/main.mjs",
+    "devDependencies": {
+        "@eslint/js": "^9.12.0",
+        "@types/eslint__js": "^8.42.3",
+        "@types/node": "^22.7.4",
+        "esbuild": "^0.24.0",
+        "eslint": "^9.12.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-import-resolver-typescript": "^3.6.3",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-unicorn": "^56.0.0",
+        "globals": "^15.10.0",
+        "prettier": "^3.3.3",
+        "tsx": "^4.19.1",
+        "typescript": "^5.6.2",
+        "typescript-eslint": "^8.8.0"
+    },
+    "dependencies": {
+        "fastify": "^5.0.0",
+        "fastify-plugin": "^5.0.1",
+        "pino": "^9.4.0"
+    },
+    "scripts": {
+        "lint": "eslint src && prettier --check src",
+        "fix": "eslint src --fix && prettier --write src",
+        "dev": "tsx --watch-path=src src/main.ts",
+        "prebuild": "rm -rf dist/*",
+        "build": "node build.mjs",
+        "start": "node dist/main.mjs"
+    }
+}

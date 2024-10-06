@@ -1,0 +1,15 @@
+/.idea/
+/.vscode/
+
+/dist/
+/node_modules/
+
+*.map
+*.log
+*.lock
+*.swp
+*.tsbuildinfo
+
+._*
+.DS_Store
+Thumbs.db

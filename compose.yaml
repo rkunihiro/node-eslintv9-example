@@ -1,0 +1,23 @@
+services:
+  node:
+    container_name: node-eslintv9-example-container-node
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: node:20.17.0-bookworm-slim
+    # image: gcr.io/distroless/nodejs20-debian12:nonroot
+    platform: linux/amd64
+    networks:
+      - default
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    volumes:
+      - .:/app
+    # command: ["--enable-source-maps", "/app/dist/main.mjs"]
+    init: true
+    tty: true
+
+networks:
+  default:
+    name: node-eslintv9-example-network-default
