@@ -57,7 +57,10 @@ export default [
     // custom rules
     {
         rules: {
+            eqeqeq: "error",
+            curly: ["error", "all"],
             "no-console": "error",
+            "no-else-return": "error",
 
             "@typescript-eslint/no-unused-vars": [
                 "error",
@@ -66,6 +69,7 @@ export default [
                 },
             ],
 
+            "import/newline-after-import": "error",
             "import/order": [
                 "error",
                 {

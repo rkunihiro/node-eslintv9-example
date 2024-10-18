@@ -1,4 +1,5 @@
 import { randomUUID } from "node:crypto";
+import { exit } from "node:process";
 
 import { fastify } from "fastify";
 import { pino } from "pino";
@@ -38,3 +39,5 @@ logger.info(`server stop by ${signal}`);
 
 await server.close();
 logger.info("server closed");
+
+exit(0);
